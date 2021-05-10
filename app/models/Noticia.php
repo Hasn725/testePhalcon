@@ -63,11 +63,7 @@ class Noticia extends Model
     
     public function validation($texto);{
        if(strlen($this->titulo)>255){
-           $message = new Message(
-               'Tamanho do titulo ultrapassa o estabelecido',
-               'string',
-               'titulo'
-           );
+           $message = new Message('Tamanho do titulo ultrapassa o estabelecido','string','titulo');
 
            $this->appendMessage($message);
        }
